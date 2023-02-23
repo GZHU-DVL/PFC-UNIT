@@ -47,8 +47,6 @@ Bird, dog and car datasets can be built from ImageNet with our provided [script]
 
 ## Training PFC-UNIT
 
-Download the supporting models pretrained content encoder [content_encoder.pt](https://github.com/GZHU-DVL/PFC-UNIT/model/) and pretrained find-grained classifiers [find_grained_classifiers](https://github.com/GZHU-DVL/PFC-UNIT/classification/) 
-
 Translate a content image to the target domain in the style of a style image by additionally specifying `--style`:
 ```python
 python inference.py --generator_path PRETRAINED_GENERATOR_PATH --content_encoder_path PRETRAINED_ENCODER_PATH \ 
@@ -72,9 +70,9 @@ python prior_distillation.py --unpaired_data_root UNPAIR_DATA --paired_data_root
 
 ## Training Find-grained Classifier of Find-grained Classification
 
-To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains, which are Cat (67 fine-grained varieties), Dog (120 fine-grained varieties), Bird (500 fine-grained varieties) [19], Car (19 fine-grained varieties), Age stage (10 fine-grained varieties), and Facial expression (7 fine-grained varieties) [22]. Our created FC-Kaggleis utilized to pre-train six fine-grained classifiers.
+To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains, which are Cat (67 fine-grained varieties), Dog (120 fine-grained varieties), Bird (500 fine-grained varieties) [19], Car (19 fine-grained varieties), Age stage (10 fine-grained varieties), and Facial expression (7 fine-grained varieties) [22].
 
-We provide a Jupyter notebook at `./classification/train_find_grained_classifiers.ipynb` to train the find-grained classifers.
+We provide a Jupyter notebook at `./train_find_grained_classifiers.ipynb` to train the find-grained classifers.
 
 
 ## Acknowledgments
