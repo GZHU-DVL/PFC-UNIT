@@ -72,14 +72,9 @@ python prior_distillation.py --unpaired_data_root UNPAIR_DATA --paired_data_root
 
 ## Training Find-grained Classifier of Find-grained Classification
 
-To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains (coarse-grained classes), which are [Cat](https://www.kaggle.com/datasets/denispotapov/cat-breeds-dataset-cleared) (67 fine-grained varieties)
-[17], Dog (120 fine-grained varieties) [18], Bird (500
-fine-grained varieties) [19], Car (19 fine-grained varieties)
-[20], Age stage (10 fine-grained varieties) [21], and Facial
-expression (7 fine-grained varieties) [22]. Our created FCKaggle
-is utilized to pre-train six fine-grained classifiers,
-whose objective functions are as follows:
-We provide our pretrained model [dog_find_grained_classifier.pt](https://github.com/GZHU-DVL/PFC-UNIT/classification/). We provide a Jupyter notebook at `./classification/train_find_grained_classifiers.ipynb` to train the find-grained classifers.
+To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains, which are Cat (67 fine-grained varieties), Dog (120 fine-grained varieties), Bird (500 fine-grained varieties) [19], Car (19 fine-grained varieties), Age stage (10 fine-grained varieties), and Facial expression (7 fine-grained varieties) [22]. Our created FC-Kaggleis utilized to pre-train six fine-grained classifiers.
+
+We provide a Jupyter notebook at `./classification/train_find_grained_classifiers.ipynb` to train the find-grained classifers.
 
 
 ## Acknowledgments
