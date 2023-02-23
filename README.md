@@ -26,7 +26,7 @@ the proposed PFC-UNIT outperforms leading state-of-the-art
 methods.*
 
 ## Installation
-This repository is built in PyTorch 1.7.0 and tested on CUDA 10.1. See `environment/pfcunit_env.yaml` for the installation of dependencies required to run PFC-UNIT.
+This repository is built in PyTorch 1.7.0 and tested on CUDA 10.1. See `environment/PFC-UNIT.yaml` for the installation of dependencies required to run PFC-UNIT.
 ```bash
 # Creat the environment
 conda env create -f ./environment/pfcunit_env.yaml
