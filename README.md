@@ -59,6 +59,8 @@ To pre-train the fine-grained classifiers, we create a new fine-grained classifi
 
 We provide a Jupyter notebook at `./train_find_grained_classifiers.ipynb` to train the find-grained classifers.
 
+The pre-trained find-grained classifers need to be saved in './classification/FIND_GRAINED_CLASSIFERS.pt`.
+
 ## Training PFC-UNIT
 
 Translate a content image to the target domain in the style of a style image by additionally specifying `--style`:
@@ -67,9 +69,9 @@ python inference.py --generator_path PRETRAINED_GENERATOR_PATH --content_encoder
                     --content CONTENT_IMAGE_PATH --style STYLE_IMAGE_PATH --device DEVICE
 ```
 
-Train model to complete different image-to-image translation tasks. (The trained model is saved as `./checkpoint/TASK-ITERATIONS.pt`. Intermediate results are saved in `./log/TASK/`.)
+Train model to complete different image-to-image translation tasks. (Translate a content image to the target domain in the style of a style image by additionally specifying `--task_type`. 'The trained model is saved as `./checkpoint/TASK-ITERATIONS.pt`. Intermediate results are saved in `./log/TASK/`.)
 ```python
-python train.py --task TASK --batch BATCH_SIZE --iter ITERATIONS \
+python train.py --task TASK --batch BATCH_SIZE --iter ITERATIONS --task_type CLASSIFICATION_TYPE\
                 --source_paths SPATH1 SPATH2 ... SPATHS --source_num SNUM1 SNUM2 ... SNUMS \
                 --target_paths TPATH1 TPATH2 ... TPATHT --target_num TNUM1 TNUM2 ... TNUMT
 ```
