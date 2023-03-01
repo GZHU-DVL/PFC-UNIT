@@ -1,5 +1,6 @@
 # PFC-UNIT: UNSUPERVISED IMAGE-TO-IMAGE TRANSLATION WITH PRE-TRAINED FINE-GRAINED CLASSIFICATION
 
+![p](github_page/code1.png)
 This repository provides the official PyTorch implementation for the following paper:
 
 > **PFC-UNIT: UNSUPERVISED IMAGE-TO-IMAGE TRANSLATION WITH PRE-TRAINED FINE-GRAINED CLASSIFICATION**<br>
@@ -37,13 +38,13 @@ conda env create -f ./environment/pfcunit_env.yaml
 Human face dataset, animal face dataset and aristic human face dataset can be downloaded from their official pages.
 Bird, dog and car datasets can be built from ImageNet with our provided [script](./data_preparation).
 
-| Translation Task | Used Dataset                                                                                                                                                                                                                                                                           | 
-|:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| Male←→Female     | [CelebA-HQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks): divided into male and female subsets by [StarGANv2](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks)                                                                     |
-| Dog←→Cat         | [AFHQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks) provided by [StarGANv2](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks)                                                                                                       |
-| Face←→Cat        | [CelebA-HQ](https://github.com/switchablenorms/CelebAMask-HQ) and [AFHQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks)                                                                                                                                      |
-| Bird←→Dog        | 4 classes of birds and 4 classes of dogs in [ImageNet291](https://github.com/williamyang1991/GP-UNIT/tree/main/data_preparation)
-| Bird←→Car        | 4 classes of birds and 4 classes of cars in [ImageNet291](https://github.com/williamyang1991/GP-UNIT/tree/main/data_preparation)                                                                                                               
+| Translation Task                                 | Used Dataset                                                                                                                                                                                                                                                                           | 
+|:-------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| Male←→Female                                     | [CelebA-HQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks): divided into male and female subsets by [StarGANv2](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks)                                                                     |
+| Dog←→Cat                                         | [AFHQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks) provided by [StarGANv2](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks)                                                                                                       |
+| Face←→Cat                                        | [CelebA-HQ](https://github.com/switchablenorms/CelebAMask-HQ) and [AFHQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks)                                                                                                                                      |
+| Bird←→Dog                                        | 4 classes of birds and 4 classes of dogs in [ImageNet291](https://github.com/williamyang1991/GP-UNIT/tree/main/data_preparation)
+| Bird←→Car                                        | 4 classes of birds and 4 classes of cars in [ImageNet291](https://github.com/williamyang1991/GP-UNIT/tree/main/data_preparation)                                                                                                               
 
 ## Training PFC-UNIT
 
@@ -70,7 +71,7 @@ python prior_distillation.py --unpaired_data_root UNPAIR_DATA --paired_data_root
 
 ## Training Find-grained Classifier of Find-grained Classification
 
-To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains, which are Cat (67 fine-grained varieties), Dog (120 fine-grained varieties), Bird (500 fine-grained varieties) [19], Car (19 fine-grained varieties), Age stage (10 fine-grained varieties), and Facial expression (7 fine-grained varieties) [22].
+To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains, which are Cat (67 fine-grained varieties), Dog (120 fine-grained varieties), Bird (500 fine-grained varieties), Car (19 fine-grained varieties), Age stage (10 fine-grained varieties), and Facial expression (7 fine-grained varieties).
 
 We provide a Jupyter notebook at `./train_find_grained_classifiers.ipynb` to train the find-grained classifers.
 
