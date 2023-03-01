@@ -1,6 +1,6 @@
 # PFC-UNIT: UNSUPERVISED IMAGE-TO-IMAGE TRANSLATION WITH PRE-TRAINED FINE-GRAINED CLASSIFICATION
 
-![p](github_page/code1.png)
+![p](github_page/code1.pdf)
 This repository provides the official PyTorch implementation for the following paper:
 
 > **PFC-UNIT: UNSUPERVISED IMAGE-TO-IMAGE TRANSLATION WITH PRE-TRAINED FINE-GRAINED CLASSIFICATION**<br>
