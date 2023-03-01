@@ -59,7 +59,7 @@ To pre-train the fine-grained classifiers, we create a new fine-grained classifi
 
 We provide a Jupyter notebook at `./train_find_grained_classifiers.ipynb` to train the find-grained classifers.
 
-The pre-trained find-grained classifers need to be saved in './classification/FIND_GRAINED_CLASSIFERS.pt`.
+The pre-trained find-grained classifers need to be saved in `./classification/FIND_GRAINED_CLASSIFERS.pt` .
 
 ## Training PFC-UNIT
 
