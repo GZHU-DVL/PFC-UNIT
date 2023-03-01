@@ -39,8 +39,8 @@ Different datasets (including CelebA-HQ, AFHQ and ImageNet291, which can be down
 
 | Translation Task | Used Dataset                                                                                                                                                                                                                                                                           | 
 |:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| Male←→Female     | [CelebA-HQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks)(divided into male and female subsets by [StarGANv2](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks))                                                                     |
-| Dog←→Cat         | [AFHQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks)(provided by [StarGANv2](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks))                                                                                                       |
+| Male←→Female     | [CelebA-HQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks) ( divided into male and female subsets by [StarGANv2](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks))                                                                     |
+| Dog←→Cat         | [AFHQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks) ( provided by [StarGANv2](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks))                                                                                                       |
 | Face←→Cat        | [CelebA-HQ](https://github.com/switchablenorms/CelebAMask-HQ) and [AFHQ](https://github.com/clovaai/stargan-v2#datasets-and-pre-trained-networks)                                                                                                                                      |
 | Bird←→Dog        | 4 classes of birds and 4 classes of dogs in [ImageNet291](https://github.com/williamyang1991/GP-UNIT/tree/main/data_preparation)
 | Bird←→Car        | 4 classes of birds and 4 classes of cars in [ImageNet291](https://github.com/williamyang1991/GP-UNIT/tree/main/data_preparation)                                                                                          
@@ -69,7 +69,7 @@ python inference.py --generator_path PRETRAINED_GENERATOR_PATH --content_encoder
                     --content CONTENT_IMAGE_PATH --style STYLE_IMAGE_PATH --device DEVICE
 ```
 
-Train model to complete different image-to-image translation tasks. (Translate a content image to the target domain in the style of a style image by additionally specifying `--task_type`. 'The trained model is saved as `./checkpoint/TASK-ITERATIONS.pt`. Intermediate results are saved in `./log/TASK/`.)
+Train model to complete different image-to-image translation tasks. (Translate a content image to the target domain in the style of a style image by additionally specifying `--task_type`. The trained model is saved as `./checkpoint/TASK-ITERATIONS.pt`. Intermediate results are saved in `./log/TASK/`.)
 ```python
 python train.py --task TASK --batch BATCH_SIZE --iter ITERATIONS --task_type CLASSIFICATION_TYPE\
                 --source_paths SPATH1 SPATH2 ... SPATHS --source_num SNUM1 SNUM2 ... SNUMS \
