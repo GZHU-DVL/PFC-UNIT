@@ -35,8 +35,7 @@ conda env create -f ./environment/pfcunit_env.yaml
 
 ## Dataset Preparation
 
-Human face dataset, animal face dataset and aristic human face dataset can be downloaded from their official pages.
-Bird, dog and car datasets can be built from ImageNet with our provided [script](./data_preparation).
+Different datasets (including CelebA-HQ, AFHQ and ImageNet291, which can be downloaded from their official pages) are utilized to complete different image-to-image translation tasks.
 
 | Translation Task | Used Dataset                                                                                                                                                                                                                                                                           | 
 |:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
@@ -54,7 +53,7 @@ python inference.py --generator_path PRETRAINED_GENERATOR_PATH --content_encoder
                     --content CONTENT_IMAGE_PATH --style STYLE_IMAGE_PATH --device DEVICE
 ```
 
-Train model to complete different image-to-image translation tasks.(The trained model is saved as `./checkpoint/TASK-ITERATIONS.pt`. Intermediate results are saved in `./log/TASK/`.)
+Train model to complete different image-to-image translation tasks. (The trained model is saved as `./checkpoint/TASK-ITERATIONS.pt`. Intermediate results are saved in `./log/TASK/`.)
 ```python
 python train.py --task TASK --batch BATCH_SIZE --iter ITERATIONS \
                 --source_paths SPATH1 SPATH2 ... SPATHS --source_num SNUM1 SNUM2 ... SNUMS \
@@ -63,7 +62,7 @@ python train.py --task TASK --batch BATCH_SIZE --iter ITERATIONS \
 
 ## Training Content Encoder of Content Extraction
 
-We provide our pretrained model [content_encoder.pt]().This model is obtained by:
+Train model to get the pretrained model Content Encoder. ( The Content Encoder is obtained as `./checkpoint/content_encoder.pt`.)
 ```python
 python prior_distillation.py --unpaired_data_root UNPAIR_DATA --paired_data_root PAIR_DATA \
                              --unpaired_mask_root UNPAIR_MASK --paired_mask_root PAIR_MASK
@@ -71,7 +70,7 @@ python prior_distillation.py --unpaired_data_root UNPAIR_DATA --paired_data_root
 
 ## Training Find-grained Classifier of Find-grained Classification
 
-To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains, which are Cat (67 fine-grained varieties), Dog (120 fine-grained varieties), Bird (500 fine-grained varieties), Car (19 fine-grained varieties), Age stage (10 fine-grained varieties), and Facial expression (7 fine-grained varieties).
+To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains, which are Cat (including 67 fine-grained varieties), Dog (including 120 fine-grained varieties), Bird (including 500 fine-grained varieties), Car (including 19 fine-grained varieties), Age stage (including 10 fine-grained varieties), and Facial expression (including 7 fine-grained varieties).
 
 We provide a Jupyter notebook at `./train_find_grained_classifiers.ipynb` to train the find-grained classifers.
 
