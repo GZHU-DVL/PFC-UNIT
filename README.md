@@ -47,19 +47,19 @@ Different datasets (including CelebA-HQ, AFHQ and ImageNet291, which can be down
 
 ## Training Content Encoder of Content Extraction
 
-Train model to get the pretrained model Content Encoder. ( The Content Encoder is obtained as `./checkpoint/content_encoder.pt`.)
+Train the model to get the pre-trained model Content Encoder. ( The Content Encoder is obtained as `./checkpoint/content_encoder.pt`.)
 ```python
 python prior_distillation.py --unpaired_data_root UNPAIR_DATA --paired_data_root PAIR_DATA \
                              --unpaired_mask_root UNPAIR_MASK --paired_mask_root PAIR_MASK
 ```
 
-## Training Find-grained Classifier of Find-grained Classification
+## Training Fine-grained Classifier of Find-grained Classification
 
-To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains, which are Cat (including 67 fine-grained varieties), Dog (including 120 fine-grained varieties), Bird (including 500 fine-grained varieties), Car (including 19 fine-grained varieties), Age stage (including 10 fine-grained varieties), and Facial expression (including 7 fine-grained varieties).
+To pre-train the fine-grained classifiers, we create a new fine-grained classification dataset, termed FCKaggle. Our FC-Kaggle includes six domains, which are Cat (including 67 fine-grained varieties), Dog (including 120 fine-grained varieties), Bird (including 500 fine-grained varieties), Car (including 19 fine-grained varieties), Age stage (including 10 fine-grained varieties), and Facial expression (including 7 fine-grained varieties). 
 
-We provide a Jupyter notebook at `./train_find_grained_classifiers.ipynb` to train the find-grained classifers.
+We provide a Jupyter notebook at `./train_find_grained_classifiers.ipynb` to train the find-grained classifiers.
 
-The pre-trained find-grained classifers need to be saved in `./classification/FIND_GRAINED_CLASSIFERS.pt` .
+Our pre-trained fine-grained classifiers are provided at [Link](https://pan.baidu.com/s/1n8fuyKAMhBIiGVe7ItLygQ)(code: unit) and need to be saved in `./classification/FIND_GRAINED_CLASSIFERS.pt`.
 
 ## Training PFC-UNIT
 
@@ -69,7 +69,7 @@ python inference.py --generator_path PRETRAINED_GENERATOR_PATH --content_encoder
                     --content CONTENT_IMAGE_PATH --style STYLE_IMAGE_PATH --device DEVICE
 ```
 
-Train model to complete different image-to-image translation tasks. (Translate a content image to the target domain in the style of a style image by additionally specifying `--task_type`. The trained model is saved as `./checkpoint/TASK-ITERATIONS.pt`. Intermediate results are saved in `./log/TASK/`.)
+Train the model to complete different image-to-image translation tasks. (Translate a content image to the target domain in the style of a style image by additionally specifying `--task_type`. The trained model is saved as `./checkpoint/TASK-ITERATIONS.pt`. Intermediate results are saved in `./log/TASK/`.)
 ```python
 python train.py --task TASK --batch BATCH_SIZE --iter ITERATIONS --task_type CLASSIFICATION_TYPE\
                 --source_paths SPATH1 SPATH2 ... SPATHS --source_num SNUM1 SNUM2 ... SNUMS \
