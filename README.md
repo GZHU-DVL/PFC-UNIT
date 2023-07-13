@@ -35,7 +35,7 @@ conda env create -f ./environment/pfcunit_env.yaml
 
 ## Dataset Preparation
 
-Different datasets (including CelebA-HQ, AFHQ and ImageNet291, which can be downloaded from their official pages) are utilized to complete different image-to-image translation tasks.
+Different datasets (including CelebA-HQ, AFHQ, and ImageNet291, which can be downloaded from their official pages) are utilized to complete different image-to-image translation tasks.
 
 | Translation Task | Used Dataset                                                                                                                                                                                                                                                                           | 
 |:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
@@ -47,7 +47,7 @@ Different datasets (including CelebA-HQ, AFHQ and ImageNet291, which can be down
 
 ## Training Content Encoder of Content Extraction
 
-Train the model to get the pre-trained model Content Encoder. ( The Content Encoder is obtained as `./checkpoint/content_encoder.pt`.)
+Train the model to get the pre-trained model Content Encoder. ( The Content Encoder is obtained as `./checkpoint/content_encoder.pt`.) And also you can download it at [link](https://drive.google.com/file/d/1I7_IMMheihcIR57vInof5g6R0j8wEonx/view), which is provided by [GP-UNIT](https://github.com/williamyang1991/GP-UNIT/).
 ```python
 python prior_distillation.py --unpaired_data_root UNPAIR_DATA --paired_data_root PAIR_DATA \
                              --unpaired_mask_root UNPAIR_MASK --paired_mask_root PAIR_MASK
@@ -59,7 +59,7 @@ To pre-train the fine-grained classifiers, we create a new fine-grained classifi
 
 We provide a Jupyter notebook at `./train_find_grained_classifiers.ipynb` to train the find-grained classifiers.
 
-Our pre-trained fine-grained classifiers are provided at [Link](https://pan.baidu.com/s/1n8fuyKAMhBIiGVe7ItLygQ)(code: unit) and need to be saved in `./classification/FIND_GRAINED_CLASSIFERS.pt`.
+Our pre-trained fine-grained classifiers are provided at [link](https://pan.baidu.com/s/1n8fuyKAMhBIiGVe7ItLygQ)(code: unit) and need to be saved in `./classification/FIND_GRAINED_CLASSIFERS.pt`.
 
 ## Training PFC-UNIT
 
